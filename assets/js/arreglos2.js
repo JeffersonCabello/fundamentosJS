@@ -13,4 +13,19 @@ juegos.forEach( (elemento, indice, arr)=>{
 
 let nuevaLongitud = juegos.push('Obscure');
 
-console.log(nuevaLongitud,juegos);
+console.log({nuevaLongitud,juegos});
+
+nuevaLongitud = juegos.unshift('Fire Emblem');
+console.log({nuevaLongitud,juegos});
+
+let juegoBorrado = juegos.pop();
+console.log({juegoBorrado,juegos});
+
+
+console.log(juegos);
+let pos = 1;
+let juegosBorrados = juegos.splice(pos,2);
+console.log({juegosBorrados,juegos});
+
+let residentdIndex = juegos.indexOf('Resident Evil');
+console.log(residentdIndex);
