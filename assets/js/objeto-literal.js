@@ -1,5 +1,5 @@
 
-let personaje = {
+const personaje = {
     nombre: 'Tony Stark',
     codeName: 'Iron Man',
     vivo: false,
@@ -31,3 +31,24 @@ const x = 'vivo';
 
 console.log('Vivo',personaje[x]);
 console.log('Ultima pelicula',personaje['ultima-pelicula']);
+
+delete personaje.edad;
+console.log(personaje);
+
+personaje.casado = true;
+
+const entriesPares = Object.entries(personaje);
+console.log(entriesPares);
+
+console.log(personaje);
+
+Object.freeze(personaje);
+
+personaje.dinero = 10000000000;
+personaje.casado = false;
+personaje.direccion.ubicacion = "Costa Rica";
+console.log(personaje);
+
+const propiedades = Object.getOwnPropertyNames(personaje);
+const valores = Object.values(personaje);
+console.log({propiedades,valores});
